@@ -1,287 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <div class="container">
-
-        <div id="left">
-            <div id="logo">
-                <div id="log"><img src="/img/logo.svg" id="inv" alt="logo"></div>
-                <ul>
-                    <li> <img src="/img/home.svg" id="inv" alt="home"> Home</li>
-                    <li><img src="/img/search.svg" alt="search" id="inv">Search</li>
-                </ul>
-
-
-
-            </div>
-            <div id="library">
-                <div id="part1"><img id="im1" src="/img/library.svg">
-                    <h4>Your library</h4>
-                </div>
-                <img id="im2" src="/img/plus.svg">
-            </div>
-            <div id="scrollarea">
-                <div class="songList">
-
+    <body>
+        <div class="container">
+            <div id="left">
+                <div id="logo">
+                    <div id="log">
+                        <img
+                            src="img/logo.svg"
+                            id="inv"
+                            alt="logo"
+                        />
+                    </div>
                     <ul>
-
+                        <li>
+                            <img
+                                src="img/home.svg"
+                                id="inv"
+                                alt="home"
+                            />
+                            Home
+                        </li>
+                        <li>
+                            <img
+                                src="img/search.svg"
+                                alt="search"
+                                id="inv"
+                            />Search
+                        </li>
                     </ul>
                 </div>
-                <!-- <div class="box">
+                <div id="library">
+                    <div id="part1">
+                        <img
+                            id="im1"
+                            src="img/library.svg"
+                        />
+                        <h4>Your library</h4>
+                    </div>
+                    <img
+                        id="im2"
+                        src="img/plus.svg"
+                    />
+                </div>
+                <div id="scrollarea">
+                    <div class="songList">
+                        <ul></ul>
+                    </div>
+                    <!-- <div class="box">
                     <span> Create your first playlist<br>
                 
             </div>  -->
+                </div>
             </div>
-        </div>
-        <div id="right">
-            <div id="top">
-                <span><img src="/img/leftarrow.svg" id="r1"><img id="r1" src="/img/rightarrow.svg"></span>
-                <span id="buttons">
-                    <button id="sign">Sign up</button>
-                    <button id="login">Log in</button></span>
-            </div>
-            <div class="playlist">
-                <h1>Spotify Playlists</h1>
-                <div id="portion">
-
-                    <div class="card" data-folder="punjabi101">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-
-                        <img src="\img\panjabi101.jpeg">
-
-                        <h6>Punjabi 101</h6>
-                        <p>Ultimate 101 Punjabi Hits with Karan Aujla</p>
-                    </div>
-                    <div class="card" data-folder="bollywood">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\bollywood.jpeg">
-
-                        <h6>Bollywood Central</h6>
-                        <p>Bollywood Central, jab baje toh seedha dil ke centre mein lage &hearts; Cover - Animal</p>
-                    </div>
-                    <div class="card" data-folder="mcstan">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\rap91.jpeg">
-
-                        <h6>RAP 91</h6>
-                        <p>India's Rap Scene. Cover- MC STAN</p>
-                    </div>
-                    <div class="card" data-folder="diljit">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\diljeet.webp">
-
-                        <h6>Best of Diljit Dosanjh</h6>
-                        <p>Super hits</p>
-                    </div>
-                    <div class="card" data-folder="tamil">
-                        <img src="\img\tamil.jpeg">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-
-                        <h6>Kollywood Cream</h6>
-                        <p>Finest collection of Tamil Music from the past 10 years
-                            Cover : Jailer</p>
-                    </div>
-                    <div class="card" data-folder="pop">
-                        <img src="\img\pop.jpeg">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-
-                        <h6>I-Pop Superhits</h6>
-                        <p>Biggest hits from your favourite I-Pop stars. Cover- Jasleen Royal</p>
-                    </div>
-
-
-
-                    <div class="card" data-folder="jazz">
-
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\jazz.jpeg">
-
-                        <h6>Jazz in the...</h6>
-                        <p>Soft instrumental Jazz for all your activities.</p>
-                    </div>
-                    <div class="card" data-folder="romantic">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\romantic.jpeg">
-
-                        <h6>Romantic playlist</h6>
-                        <p>By Rehan sayed</p>
-                    </div>
-                    <div class="card" data-folder="sadsongs">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\sadsongs.webp">
-
-                        <h6>Sad Songs</h6>
-                        <p>By Spotify</p>
-                    </div>
-                    <div class="card" data-folder="hardysandhu">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\playboy.jpeg">
-
-                        <h6>Playboy vibes</h6>
-                        <p>By ImpactGod </p>
-                    </div>
-
-
-                    <div class="card" data-folder="rock">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\rockckassics.jpeg">
-
-                        <h6>Rock Classics</h6>
-                        <p>Rock legends & epic songs that continue to inspire generations. Cover: The Rolling Stones
-                        </p>
-                    </div>
-                    <div class="card" data-folder="relaxation">
-                        <div id="playbutton">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 48 48" width="48px">
-                                <circle cx="24" cy="24" r="22" fill="#4CAF50" />
-                                <polygon points="16,12 32,24 16,36" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="\img\stress.jpeg">
-
-                        <h6>Stress Relief</h6>
-                        <p>Calm your mind from anxiety with gentle piano and ambient music.</p>
-                    </div>
-
-                    <div id="mainfooter">
-
-                        <div>
-                            Company
-                            <a href="https://www.spotify.com/in-en/about-us/contact/"><span>About</span></a>
-                            <a href="https://www.lifeatspotify.com/"><span>Jobs</span></a>
-                            <a href="https://newsroom.spotify.com/"><span>For the Record</span></a>
-                            <a href="https://ads.spotify.com/"><span>Advertising</span></a>
-                        </div>
-                        <div>
-                            Communities<a href="https://artists.spotify.com/"><span>For Artists</span></a>
-
-                            <a href="https://developer.spotify.com/"><span>Developers</span></a>
-                            <a href="https://investors.spotify.com/"><span>Investors</span></a>
-                            <a href="https://spotifyforvendors.com/"><span>Vendors</span></a>
-                        </div>
-
-                        <div>
-                            Useful Links
-                            <a href="https://support.spotify.com/"><span>Support</span></a>
-                            <a href="https://www.spotify.com/in-en/download/" ><span >Free Mobile App</span></a>
-                        </div>
-                        <div>
-                            Spotify Plans
-                            <a href="https://www.spotify.com/in-en/premium/?ref=spotifycom_footer_premium_individual"><span>Premium
-                                    Individual</span></a>
-                            <a href="https://www.spotify.com/in-en/duo/?ref=spotifycom_footer_premium_duo"><span>Premium
-                                Duo</span></a>
-                            <a href="https://www.spotify.com/in-en/family/?ref=spotifycom_footer_premium_family"><span>Premium
-                                    Family</span></a>
-                            <a href="https://www.spotify.com/in-en/student/?ref=spotifycom_footer_premium_student"><span>Premium
-                                    Student</span></a>
-                            <a href="https://www.spotify.com/in-en/free/?ref=spotifycom_footer_free"><span>Spotify
-                                    Free</span></a>
-                        </div>
-
-
-                      <div class="logo"> <img src="\img\insta.svg"></div>
-                      <div class="logo">  <img src="\img\twitter.svg"></div>
-                      <div class="logo"> <img src="\img\face.svg"></div>
-                      
-                       
-
-                    </div>
-
-                    <div id="playbar">
-                        <div class="songinfo">
-
-                        </div>
-                        <div class="songbutton">
-                            <img id="pr" src="\img\shuffle.svg">
-                            <img id="prev" src="\img\pr.svg">
-                            <img id="mid" src="\img\playbutton.svg">
-                            <img id="forward" src="\img\forward.svg">
-                            <img id="pr" src="\img\replay.svg">
-                        </div>
-
-                        <div class="songtime"></div>
-                        <div class="sg">
-                            <div class="volume">
-                                <img width="25" src="img/volume.svg">
+            <div id="right">
+                <div id="top">
+                    <span
+                        ><img
+                            src="img/leftarrow.svg"
+                            id="r1" /><img
+                            id="r1"
+                            src="img/rightarrow.svg"
+                    /></span>
+                    <span id="buttons">
+                        <button id="sign">Sign up</button>
+                        <button id="login">Log in</button></span
+                    >
+                </div>
+                <div class="playlist">
+                    <h1>Spotify Playlists</h1>
+                    <div id="portion">
+                        <div
+                            class="card"
+                            data-folder="punjabi101"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
                             </div>
-                            <div class="range"><input type="range" id="volume"> </div>
 
+                            <img src="img\panjabi101.jpeg" />
+
+                            <h6>Punjabi 101</h6>
+                            <p>Ultimate 101 Punjabi Hits with Karan Aujla</p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="bollywood"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\bollywood.jpeg" />
+
+                            <h6>Bollywood Central</h6>
+                            <p>
+                                Bollywood Central, jab baje toh seedha dil ke
+                                centre mein lage &hearts; Cover - Animal
+                            </p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="mcstan"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\rap91.jpeg" />
+
+                            <h6>RAP 91</h6>
+                            <p>India's Rap Scene. Cover- MC STAN</p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="diljit"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\diljeet.webp" />
+
+                            <h6>Best of Diljit Dosanjh</h6>
+                            <p>Super hits</p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="tamil"
+                        >
+                            <img src="img\tamil.jpeg" />
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+
+                            <h6>Kollywood Cream</h6>
+                            <p>
+                                Finest collection of Tamil Music from the past
+                                10 years Cover : Jailer
+                            </p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="pop"
+                        >
+                            <img src="img\pop.jpeg" />
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+
+                            <h6>I-Pop Superhits</h6>
+                            <p>
+                                Biggest hits from your favourite I-Pop stars.
+                                Cover- Jasleen Royal
+                            </p>
+                        </div>
+
+                        <div
+                            class="card"
+                            data-folder="jazz"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\jazz.jpeg" />
+
+                            <h6>Jazz in the...</h6>
+                            <p>
+                                Soft instrumental Jazz for all your activities.
+                            </p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="romantic"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\romantic.jpeg" />
+
+                            <h6>Romantic playlist</h6>
+                            <p>By Rehan sayed</p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="sadsongs"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\sadsongs.webp" />
+
+                            <h6>Sad Songs</h6>
+                            <p>By Spotify</p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="hardysandhu"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\playboy.jpeg" />
+
+                            <h6>Playboy vibes</h6>
+                            <p>By ImpactGod</p>
+                        </div>
+
+                        <div
+                            class="card"
+                            data-folder="rock"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\rockckassics.jpeg" />
+
+                            <h6>Rock Classics</h6>
+                            <p>
+                                Rock legends & epic songs that continue to
+                                inspire generations. Cover: The Rolling Stones
+                            </p>
+                        </div>
+                        <div
+                            class="card"
+                            data-folder="relaxation"
+                        >
+                            <div id="playbutton">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="48px"
+                                    viewBox="0 0 48 48"
+                                    width="48px"
+                                >
+                                    <circle
+                                        cx="24"
+                                        cy="24"
+                                        r="22"
+                                        fill="#4CAF50"
+                                    />
+                                    <polygon
+                                        points="16,12 32,24 16,36"
+                                        fill="black"
+                                    />
+                                </svg>
+                            </div>
+                            <img src="img\stress.jpeg" />
+
+                            <h6>Stress Relief</h6>
+                            <p>
+                                Calm your mind from anxiety with gentle piano
+                                and ambient music.
+                            </p>
+                        </div>
+
+                        <div id="mainfooter">
+                            <div>
+                                Company
+                                <a
+                                    href="https://www.spotify.com/in-en/about-us/contact/"
+                                    ><span>About</span></a
+                                >
+                                <a href="https://www.lifeatspotify.com/"
+                                    ><span>Jobs</span></a
+                                >
+                                <a href="https://newsroom.spotify.com/"
+                                    ><span>For the Record</span></a
+                                >
+                                <a href="https://ads.spotify.com/"
+                                    ><span>Advertising</span></a
+                                >
+                            </div>
+                            <div>
+                                Communities<a
+                                    href="https://artists.spotify.com/"
+                                    ><span>For Artists</span></a
+                                >
+
+                                <a href="https://developer.spotify.com/"
+                                    ><span>Developers</span></a
+                                >
+                                <a href="https://investors.spotify.com/"
+                                    ><span>Investors</span></a
+                                >
+                                <a href="https://spotifyforvendors.com/"
+                                    ><span>Vendors</span></a
+                                >
+                            </div>
+
+                            <div>
+                                Useful Links
+                                <a href="https://support.spotify.com/"
+                                    ><span>Support</span></a
+                                >
+                                <a
+                                    href="https://www.spotify.com/in-en/download/"
+                                    ><span>Free Mobile App</span></a
+                                >
+                            </div>
+                            <div>
+                                Spotify Plans
+                                <a
+                                    href="https://www.spotify.com/in-en/premium/?ref=spotifycom_footer_premium_individual"
+                                    ><span>Premium Individual</span></a
+                                >
+                                <a
+                                    href="https://www.spotify.com/in-en/duo/?ref=spotifycom_footer_premium_duo"
+                                    ><span>Premium Duo</span></a
+                                >
+                                <a
+                                    href="https://www.spotify.com/in-en/family/?ref=spotifycom_footer_premium_family"
+                                    ><span>Premium Family</span></a
+                                >
+                                <a
+                                    href="https://www.spotify.com/in-en/student/?ref=spotifycom_footer_premium_student"
+                                    ><span>Premium Student</span></a
+                                >
+                                <a
+                                    href="https://www.spotify.com/in-en/free/?ref=spotifycom_footer_free"
+                                    ><span>Spotify Free</span></a
+                                >
+                            </div>
+
+                            <div class="logo"><img src="\img\insta.svg" /></div>
+                            <div class="logo">
+                                <img src="img\twitter.svg" />
+                            </div>
+                            <div class="logo"><img src="\img\face.svg" /></div>
+                        </div>
+                        <div id="playbar">
+                            <div class="songinfo"></div>
+                            <div class="control-time">
+                                <div class="songbutton">
+                                    <img
+                                        id="pr"
+                                        src="img\shuffle.svg"
+                                    />
+                                    <img
+                                        id="prev"
+                                        src="img\pr.svg"
+                                    />
+                                    <img
+                                        id="mid"
+                                        src="img\playbutton.svg"
+                                    />
+                                    <img
+                                        id="forward"
+                                        src="img\forward.svg"
+                                    />
+                                    <img
+                                        id="pr"
+                                        src="img\replay.svg"
+                                    />
+                                </div>
+
+                                <div class="songtime"></div>
+                            </div>
+
+                            <div class="sg">
+                                <div class="volume">
+                                    <img
+                                        width="25"
+                                        src="img/volume.svg"
+                                    />
+                                </div>
+                                <div class="range">
+                                    <input
+                                        type="range"
+                                        id="volume"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
-
-
-
-</body>
-<script src="script.js"></script>
-
+    </body>
+    <script src="script.js"></script>
 </html>
