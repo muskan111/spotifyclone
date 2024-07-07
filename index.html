@@ -16,7 +16,11 @@
     <body>
         <div class="container">
             <div id="left">
+               
                 <div id="logo">
+                    <div class="close">
+                        <img width="30" class="invert" src="img/close.svg" alt="">
+                    </div>
                     <div id="log">
                         <img
                             src="img/logo.svg"
@@ -67,17 +71,33 @@
             </div>
             <div id="right">
                 <div id="top">
-                    <span
-                        ><img
-                            src="img/leftarrow.svg"
-                            id="r1" /><img
-                            id="r1"
-                            src="img/rightarrow.svg"
-                    /></span>
+                    <span id="head">
+                        <div class="hamburgerContainer">
+
+                            <img width="40" class="invert hamburger" src="img/hamburger.svg" alt="">
+                           
+                        </div>
+                        <div id="arrow">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18"
+                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6"
+                                stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    
+                   </span>
+                   
                     <span id="buttons">
                         <button id="sign">Sign up</button>
-                        <button id="login">Log in</button></span
-                    >
+                        <button id="login">Log in</button></span>
+                       
+                        
+                    
                 </div>
                 <div class="playlist">
                     <h1>Spotify Playlists</h1>
@@ -441,7 +461,7 @@
 
                         <div id="mainfooter">
                             <div>
-                                Company
+                               <span>Company</span> 
                                 <a
                                     href="https://www.spotify.com/in-en/about-us/contact/"
                                     ><span>About</span></a
@@ -457,7 +477,7 @@
                                 >
                             </div>
                             <div>
-                                Communities<a
+                               <span>Communities</span> <a
                                     href="https://artists.spotify.com/"
                                     ><span>For Artists</span></a
                                 >
@@ -474,7 +494,7 @@
                             </div>
 
                             <div>
-                                Useful Links
+<span>Useful Links</span>
                                 <a href="https://support.spotify.com/"
                                     ><span>Support</span></a
                                 >
@@ -484,7 +504,7 @@
                                 >
                             </div>
                             <div>
-                                Spotify Plans
+                                <span>Spotify Plans</span>
                                 <a
                                     href="https://www.spotify.com/in-en/premium/?ref=spotifycom_footer_premium_individual"
                                     ><span>Premium Individual</span></a
@@ -507,24 +527,19 @@
                                 >
                             </div>
 
-                            <div class="logo"><img src="\img\insta.svg" /></div>
+                            <div class="logo"><img src="img\insta.svg" /></div>
                             <div class="logo">
                                 <img src="img\twitter.svg" />
                             </div>
-                            <div class="logo"><img src="\img\face.svg" /></div>
+                            <div class="logo"><img src="img\face.svg" /></div>
                         </div>
+                        <div></div>
                         <div id="playbar">
                             <div class="songinfo"></div>
                             <div class="control-time">
                                 <div class="songbutton">
-                                    <img
-                                        id="pr"
-                                        src="img\shuffle.svg"
-                                    />
-                                    <img
-                                        id="prev"
-                                        src="img\pr.svg"
-                                    />
+                                   
+                                    <img src="img\pr.svg" id="prev">
                                     <img
                                         id="mid"
                                         src="img\playbutton.svg"
@@ -533,10 +548,7 @@
                                         id="forward"
                                         src="img\forward.svg"
                                     />
-                                    <img
-                                        id="pr"
-                                        src="img\replay.svg"
-                                    />
+                                   
                                 </div>
 
                                 <div class="songtime"></div>
