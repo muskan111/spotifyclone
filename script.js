@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentSong = new Audio();
     let songs;
     let currFolder;
+    const volumeIcon = document.getElementById("volume-icon");
 
     function secondstominsec(seconds) {
         if (isNaN(seconds) || seconds < 0) return "00:00";
@@ -44,7 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img class="invert  library-img" src="img/play.svg" alt=" "></div>
             </li>`;
         }
-    
 
         Array.from(
             document.querySelector(".songList").getElementsByTagName("li")
@@ -52,14 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
             e.addEventListener("click", () => {
                 playMusic(
                     e.querySelector(".info").firstElementChild.innerHTML.trim()
-                    
                 );
             });
         });
-//         document.querySelector(".playnow").addEventListener("click",(e)=>{
-//             console.log("hello")
-// e.style.zIndex="0";
-//         })
+        //         document.querySelector(".playnow").addEventListener("click",(e)=>{
+        //             console.log("hello")
+        // e.style.zIndex="0";
+        //         })
 
         return songs;
     }
@@ -77,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cards = document.querySelectorAll(".card");
 
-    cards.forEach(card => {
+    cards.forEach((card) => {
         card.addEventListener("click", async () => {
             const folderr = card.getAttribute("data-folder");
             console.log("fetching songs");
@@ -111,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("forward").addEventListener("click", () => {
             currentSong.pause();
             let i = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
-            if ((i + 1) < songs.length) {
+            if (i + 1 < songs.length) {
                 playMusic(songs[i + 1]);
             }
         });
@@ -120,25 +119,28 @@ document.addEventListener("DOMContentLoaded", () => {
             .querySelector(".range input")
             .addEventListener("change", (e) => {
                 currentSong.volume = parseInt(e.target.value) / 100;
+
+                volumeIcon.setAttribute("src", "img/volume.svg");
             });
 
         currentSong.addEventListener("timeupdate", () => {
-            document.querySelector(".songtime").innerHTML = `${secondstominsec(currentSong.currentTime)}/${secondstominsec(currentSong.duration)}`;
+            document.querySelector(".songtime").innerHTML = `${secondstominsec(
+                currentSong.currentTime
+            )}/${secondstominsec(currentSong.duration)}`;
         });
-        document.querySelector(".hamburgerContainer").addEventListener("click",()=>{
-           
-         
-          console.log("cclicked")
-          document.querySelector("#left").style.left="0";
-          document.querySelector("#left").style.zIndex="20";
-            
-        });
-        document.querySelector(".close").addEventListener("click",()=>{
+        document
+            .querySelector(".hamburgerContainer")
+            .addEventListener("click", () => {
+                console.log("cclicked");
+                document.querySelector("#left").style.left = "0";
+                document.querySelector("#left").style.zIndex = "20";
+            });
+        document.querySelector(".close").addEventListener("click", () => {
             console.log("i am clicked");
-           
-            document.querySelector("#left").style.left="-6000px";
-            document.querySelector("#right").style.left="0"
-        })
+
+            document.querySelector("#left").style.left = "-6000px";
+            document.querySelector("#right").style.left = "0";
+        });
 
         document.querySelector(".volume>img").addEventListener("click", (e) => {
             if (e.target.src.includes("volume.svg")) {
@@ -151,7 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector(".range input").value = 100;
             }
         });
-
     }
 
     main();

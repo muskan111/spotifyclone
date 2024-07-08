@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-
 * {
     margin: 0px;
     padding: 0px;
@@ -26,14 +25,14 @@ body {
     /*background-color:black;
     */
 
-    width: 400px;
+    min-width: 400px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
 
     background-color: black;
     opacity: 0.93;
-    padding: 10px;
+    /* padding: 10px; */
     margin: 3px;
 }
 
@@ -51,10 +50,20 @@ body {
 */
 }
 
+.logo-close {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 #log img {
     width: 78px;
     padding-left: 8px;
-    cursor:pointer;
+    cursor: pointer;
+}
+#logo {
+    width: 100%;
 }
 
 .container {
@@ -93,7 +102,8 @@ ul li {
     border-radius: 7px;
     background-color: #121212;
     padding: 8px 12px;
-    margin: 6px 6px;
+    margin: 6px 0px;
+    margin-top: 0px;
 }
 
 #im1 {
@@ -110,6 +120,8 @@ ul li {
     background-color: #121212;
     display: flex;
     padding: 8px 12px;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 h4 {
@@ -186,7 +198,7 @@ span {
     padding: 10px;
 }
 #sign {
-background-color: #222;
+    background-color: #222;
     color: #a7a7a7;
     width: 96px;
     height: 48px;
@@ -206,12 +218,9 @@ background-color: #222;
     font-size: 16px;
     padding: 8px 30px;
 }
-#head
-{
+#head {
     display: flex;
     padding-top: 30px;
-   
-
 }
 #sign:hover {
     color: white;
@@ -228,15 +237,12 @@ background-color: #222;
 
 #top {
     display: flex;
-background-color: #222;
+    background-color: #222;
     justify-content: space-between;
 }
-.hamburgerContainer
-{
+.hamburgerContainer {
     display: none;
     cursor: pointer;
-    
-    
 }
 #buttons {
     padding: 8px;
@@ -352,7 +358,7 @@ background-color: #222;
     position: fixed;
     bottom: 30px;
     left: 0;
-    
+
     /* background-color: white; */
 
     border-radius: 10px;
@@ -483,76 +489,63 @@ background-color: #222;
 a span {
     width: 37px;
 }
-#volume
-{
+#volume {
     cursor: pointer;
 }
-.close
-    {
-        filter: invert(1);
-      display: none;
-    }
+.close {
+    filter: invert(1);
+    display: none;
+}
 @media (max-width: 1200px) {
     #left {
-        position:absolute;
+        position: absolute;
         left: -180px;
-        width:300px;
-        height:85vh;
-       
+        width: 300px;
+        height: 85vh;
     }
-   
-    .close
-    {
-        
+    .close {
+        display: block;
+    }
+
+    /* .close {
         position: absolute;
         display: inline;
-     
-      left:250px;;
-    }
+
+        left: 250px;
+    } */
     #right {
         width: 100vw;
         position: relative;
-
     }
-    
+
     #playbar {
         flex-direction: column;
         bottom: 5px;
-       
     }
     .sg {
         display: none;
     }
-    .hamburgerContainer
-    {
+    .hamburgerContainer {
         display: inline;
     }
-    #mainfooter div  span
-    {
-        font-size:8px;
+    #mainfooter div span {
+        font-size: 8px;
     }
-    #loggin
-{
-    width:40px;
-}
-#buttons
-{
-    display: inline;
-  padding-right: 0px;
-}
-#sign
-{
-    position: relative;
-    left:17px;
-}
-#arrow
-{
-    display: flex;
-}
-#top
-{
-    padding-right: 0px;
-}
-   
-
+    #loggin {
+        width: 40px;
+    }
+    #buttons {
+        display: inline;
+        padding-right: 0px;
+    }
+    #sign {
+        position: relative;
+        left: 17px;
+    }
+    #arrow {
+        display: flex;
+    }
+    #top {
+        padding-right: 0px;
+    }
 }
