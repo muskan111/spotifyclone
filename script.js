@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let songs;
     let currFolder;
     const volumeIcon = document.getElementById("volume-icon");
+    let songUl = document.querySelector(".songList ul");
 
     function secondstominsec(seconds) {
         if (isNaN(seconds) || seconds < 0) return "00:00";
@@ -15,6 +16,41 @@ document.addEventListener("DOMContentLoaded", () => {
         return `${formatstring}:${secformat}`;
     }
 
+    function setLibrarySong() {
+        songUl.innerHTML = "";
+        const currentPlayingSong = currentSong.src.split(`${currFolder}/`)[1];
+        for (const song of songs) {
+            // console.log(currentPlayingSong, song);
+            songUl.innerHTML += `<li>
+                        <div class = "library-song">
+                        <img class="invert" width='34' src="img/music.svg" alt=" ">
+                        <div class="info"><div>${song.replaceAll(
+                            "%20",
+                            " "
+                        )}</div></div>
+                        </div>
+                    
+                        <div class="playNow"><span> ${
+                            song == currentPlayingSong ? "Playing" : "Play Now"
+                        }</span>
+                        <img class="invert  library-img" src=${
+                            song == currentPlayingSong
+                                ? "img/pause.svg"
+                                : "img/play.svg"
+                        } alt=" "></div>
+                    </li>`;
+        }
+        Array.from(
+            document.querySelector(".songList").getElementsByTagName("li")
+        ).forEach((e) => {
+            e.addEventListener("click", () => {
+                playMusic(
+                    e.querySelector(".info").firstElementChild.innerHTML.trim()
+                );
+                // setLibrarySong();
+            });
+        });
+    }
     async function getSongs(folder) {
         currFolder = folder;
         let a = await fetch(`/${folder}/`);
@@ -29,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 songs.push(element.href.split(`${folder}/`)[1]);
             }
         }
-        let songUl = document.querySelector(".songList ul");
         songUl.innerHTML = "";
         for (const song of songs) {
             songUl.innerHTML += `<li>
@@ -53,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 playMusic(
                     e.querySelector(".info").firstElementChild.innerHTML.trim()
                 );
+                // setLibrarySong();
             });
         });
         //         document.querySelector(".playnow").addEventListener("click",(e)=>{
@@ -69,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             currentSong.play();
             mid.src = "img/pause.svg";
         }
+        setLibrarySong();
 
         document.querySelector(".songinfo").innerHTML = decodeURI(track);
         document.querySelector(".songtime").innerHTML = "00:00/00:00";

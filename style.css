@@ -254,11 +254,20 @@ span {
 .playlist h1 {
     margin: 20px;
 }
+
 .card {
     width: 193px;
     height: 266px;
     position: relative;
     cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.card:hover {
+    opacity: 0.75;
+    transform: scale(1.1);
+}
+.card:hover #playbutton {
+    opacity: 1;
 }
 .card img {
     width: 170px;
@@ -286,8 +295,9 @@ span {
 #playbutton {
     position: absolute;
     bottom: 102px;
-    left: 113px;
-    opacity: 0; /*because we want it to be visible at hover*/
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+    left: 113px; /*because we want it to be visible at hover*/
 }
 
 #scrollarea {
